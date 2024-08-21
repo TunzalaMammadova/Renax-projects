@@ -255,6 +255,10 @@ $(function () {
         });
     })
 
+    $("#preloader").fadeOut(500);
+    $(".preloader-bg").delay(500).fadeOut(500);
+    var wind = $(window);
+
 })
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0Jz3L8XRoFkjybXtyqxCFCYXebldtsciBX0dA8y6TyA=",
+  "Hash": "aKG7ozYZX8ED1z8AF25PH8cRhKKVNzqOGdp14cq/cRc=",
   "Source": "Final-project",
   "BasePath": "_content/Final-project",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/.DS_Store",
+      "SourceId": "Final-project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/",
+      "BasePath": "_content/Final-project",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
     {
       "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/admin/css/style.css",
       "SourceId": "Final-project",
@@ -14756,6 +14773,23 @@
       "OriginalItemSpec": "wwwroot/admin/vendors/pwstabs/jquery.pwstabs.min.js"
     },
     {
+      "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/.DS_Store",
+      "SourceId": "Final-project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/",
+      "BasePath": "_content/Final-project",
+      "RelativePath": "assets/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/.DS_Store"
+    },
+    {
       "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/css/about.css",
       "SourceId": "Final-project",
       "SourceType": "Discovered",
@@ -16199,6 +16233,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/image/f9918f65-2998-474a-817a-0e33f518e28b-ww.jpg"
+    },
+    {
+      "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/image/iconn.png",
+      "SourceId": "Final-project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/",
+      "BasePath": "_content/Final-project",
+      "RelativePath": "assets/image/iconn.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/image/iconn.png"
     },
     {
       "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/image/images.jpeg",

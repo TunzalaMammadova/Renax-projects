@@ -1,15 +1,21 @@
 ﻿@namespace Final_project.ViewModels.HeaderVM
 
 @model HeaderVM
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
 
-
-<div class="progress-wrap cursor-pointer">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-</div>
-<div class="container">
-    <div class="navbar">
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <div class="container">
+        <div class="navbar">
             <div class="col-4">
                 <div class="logo-area">
                     <a class="logo" asp-controller="Home" asp-action="Index">
@@ -17,44 +23,44 @@
                     </a>
                 </div>
             </div>
-        <div class="col-8">
-            <div class="menu-area">
-                <div class="menu">
-                    <ul>
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="About" asp-action="Index">About</a></li>
-                        <li><a asp-controller="CarListing" asp-action="Index">Cars</a></li>
-                        <li><a asp-controller="Transfer" asp-action="Index">Service</a></li>
-                        <li><a asp-controller="Team" asp-action="Index">Team</a></li>
-                        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
-                    </ul>
-                    <div class="call-us">
-                        <div class="icon-nav">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
+            <div class="col-8">
+                <div class="menu-area">
+                    <div class="menu">
+                        <ul>
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-controller="About" asp-action="Index">About</a></li>
+                            <li><a asp-controller="CarListing" asp-action="Index">Cars</a></li>
+                            <li><a asp-controller="Transfer" asp-action="Index">Service</a></li>
+                            <li><a asp-controller="Team" asp-action="Index">Team</a></li>
+                            <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                        </ul>
+                        <div class="call-us">
+                            <div class="icon-nav">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
                             <div class="text">
                                 <h6>CallUs</h6>
                                 <p>@Model.Settings["Call us"]</p>
                             </div>
-                    </div>
-
-                    @if (User.Identity.IsAuthenticated)
-                     {
-                        <form asp-controller="Account" asp-action="Logout">
-                            <button type="submit" class="px-1 btn btn-warning logout" style="background-color: #f5b754 !important">Logout</button>
-                        </form>
-                        <p1>
-                            <a class="px-1">@User.Identity.Name</a>
-                        </p1>
-                     }
-                    else
-                    {
-                        <div class="User">
-                            <a class="px-1" asp-controller="Account" asp-action="SignIn"><i class="fa-regular fa-user user" style="font-size: 25px; margin-left: 40px; color: #d6952c;"></i></a>
                         </div>
-                    }
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <form class="form-acc" asp-controller="Account" asp-action="Logout">
+                                <button type="submit" class="px-1 logout">Logout <i class="fa-solid fa-right-from-bracket"></i></button>
+                            </form>
+                            <p1>
+                                <a class="px-1">@User.Identity.Name</a>
+                            </p1>
+                        }
+                        else
+                        {
+                            <div class="User">
+                                <a class="px-1" asp-controller="Account" asp-action="SignIn"><i class="fa-regular fa-user user" style="font-size: 25px; margin-left: 40px; color: #d6952c;"></i></a>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

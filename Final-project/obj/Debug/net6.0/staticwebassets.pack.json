@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/admin/css/style.css",
       "PackagePath": "staticwebassets/admin/css/style.css"
     },
@@ -3469,6 +3473,10 @@
       "PackagePath": "staticwebassets/admin/vendors/pwstabs/jquery.pwstabs.min.js"
     },
     {
+      "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/.DS_Store",
+      "PackagePath": "staticwebassets/assets/.DS_Store"
+    },
+    {
       "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/css/about.css",
       "PackagePath": "staticwebassets/assets/css/about.css"
     },
@@ -3823,6 +3831,10 @@
     {
       "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/image/f9918f65-2998-474a-817a-0e33f518e28b-ww.jpg",
       "PackagePath": "staticwebassets/assets/image/f9918f65-2998-474a-817a-0e33f518e28b-ww.jpg"
+    },
+    {
+      "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/image/iconn.png",
+      "PackagePath": "staticwebassets/assets/image/iconn.png"
     },
     {
       "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/image/images.jpeg",
