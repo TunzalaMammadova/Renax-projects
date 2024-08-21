@@ -1,0 +1,202 @@
+﻿@namespace Final_project.ViewModels
+
+@model HomeVM
+
+@section css {
+    <link rel="stylesheet" href="~/assets/css/service.css">
+}
+
+<title>Service</title>
+
+<header>
+    <section id="bckr-img" style="background-image: url('assets/image/services.jpg');">
+        <div class="container">
+            <div class="col-12">
+                <div class="rent-area">
+                    <div class="rent">
+                        <p>WHAT WE DO</p>
+                        <h1>Our Services</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </div>
+    </section>
+    <div class="line-section"></div>
+</header>
+<main>
+    <section id="service-area">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model.Services)
+                 {
+                    <div class="col-4">
+                        <div class="cart">
+                            <div class="service-text">
+                                <h5>@item.Name</h5>
+                                <p>@item.Description</p>
+                            </div>
+                            <div class="arrow">
+                                <div class="number">
+                                    <a asp-controller="ServiceDetail" asp-action="Index" asp-route-id="@item.Id">
+                                        <div class="item">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 }
+            </div>
+        </div>
+    </section>
+    <section id="rent-now" style="background-image: url('assets/image/audi.jpg');">
+        <div class="container">
+            <div class="col-12">
+                <div class="row">
+                    <div class="rents-area">
+                        <div class="rents">
+                            <p>WHAT WE DO</p>
+                            <h1>Book Auto Rental</h1>
+                        </div>
+                    </div>
+                    <div class="booking-now">
+                        <form action="#0" class="form brdr clearfix">
+                            <div class="col2 ">
+                                <div class="selection">
+                                    <div class="select-inner">
+                                        <select class="select1 select add" style="width: 100%">
+                                            <option value="0" data-select2-id="12">Choose Car</option>
+                                            <option value="1">Lamborghini Urus</option>
+                                            <option value="2">Aston Martin DBX</option>
+                                            <option value="3">Bentley Bentayga</option>
+                                            <option value="4">Bugatti Mistral W16</option>
+                                            <option value="5">Rolls Royce Cullinan</option>
+                                            <option value="6">Bentley Continental</option>
+                                            <option value="7">Audi RS7 Sportback</option>
+                                            <option value="8">AUDI Q8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <div class="selection">
+                                    <div class="select-inner">
+                                        <select class="select1 select add" style="width: 100%">
+                                            <option value="0">Pick Up Location</option>
+                                            <option value="1">Dubai</option>
+                                            <option value="2">Abu Dhabi</option>
+                                            <option value="3">Sharjah</option>
+                                            <option value="4">Alain</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col1">
+                                <div class="input">
+                                    <div class="input1-inner">
+                                        <input type="date" class="form-control input"
+                                               placeholder="Pick Up Date" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <div class="selection">
+                                    <div class="select-inner">
+                                        <select class="select1 select add" style="width: 100%">
+                                            <option value="0">Drop Off Location</option>
+                                            <option value="1">Alain</option>
+                                            <option value="2">Sharjah</option>
+                                            <option value="3">Abu Dhabi</option>
+                                            <option value="4">Dubai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col1">
+                                <div class="input">
+                                    <div class="input1-inner">
+                                        <input type="date" class="form-control input" placeholder="Return Date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col3">
+                                <button type="submit" class="booking-button">Rent Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover"></div>
+        </div>
+    </section>
+    <section id="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="rents-area">
+                        <div class="rents">
+                            <p>WHAT WE DO</p>
+                            <h1>Other Services</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="cart">
+                        <div class="service-text">
+                            <h5>Daily Car Rental</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet the consectetur adipiscing elit entesque hendrerit elit
+                                nisan lacinia feugiat nunc eu aucton.
+                            </p>
+                        </div>
+                        <div class="arrow">
+                            <div class="numbers">
+                                <div class="num">01.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="cart">
+                        <div class="service-text">
+                            <h5>Monthly Car Rental</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet the consectetur adipiscing elit entesque hendrerit elit
+                                nisan lacinia feugiat nunc eu aucton.
+                            </p>
+                        </div>
+                        <div class="arrow">
+                            <div class="numbers">
+                                <div class="num">02.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="cart">
+                        <div class="service-text">
+                            <h5>Annual Car Rental</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet the consectetur adipiscing elit entesque hendrerit elit
+                                nisan lacinia feugiat nunc eu aucton.
+                            </p>
+                        </div>
+                        <div class="arrow">
+                            <div class="numbers">
+                                <div class="num">03.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@section js {
+    <script src="~/assets/js/service.js"></script>
+}

@@ -1,0 +1,22 @@
+﻿@namespace Final_project.ViewModels.Transfer
+
+@model TransferCreateVM
+
+<div class="container mt-5">
+    <form class="form-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <input asp-for="Image" class="form-control" placeholder="Image" />
+            <span class="text-danger" asp-validation-for="Image"></span>
+
+            <input asp-for="Name" class="form-control" placeholder="Name" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Name"></span>
+
+            <input asp-for="Description" class="form-control" placeholder="Description" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>

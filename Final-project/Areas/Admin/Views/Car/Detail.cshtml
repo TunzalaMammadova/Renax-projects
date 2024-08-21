@@ -1,0 +1,71 @@
+﻿@namespace Final_project.ViewModels.Cars
+
+@model CarDetailVM
+
+<div class="container mt-5">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="border-top-0">Image</th>
+                    <th class="border-top-0">Category</th>
+                    <th class="border-top-0">Name</th>
+                    <th class="border-top-0">Description</th>
+                    <th class="border-top-0">Passenger</th>
+                    <th class="border-top-0">Age</th>
+                    <th class="border-top-0">AirCondition</th>
+                    <th class="border-top-0">Price</th>
+                    <th class="border-top-0">Luggage</th>
+                    <th class="border-top-0">Transmission</th>
+                    <th class="border-top-0">Door</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="txt-oflo">
+                        @foreach (var item in Model.Images)
+                        {
+                            <img style="width:110px; height:100px;" ; src="~/assets/image/@item.Image" />
+                        }
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Category</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Name</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Description</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Passenger</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Age</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.AirCondition</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Price</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Luggage</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Transmission</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Door</h6>
+                    </td>
+                </tr>
+            <tbody>
+        </table>
+    </div>
+    <div class="form-group mt-3">
+        <div class="col-sm-12">
+            <a asp-action="Index" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+
+</div>

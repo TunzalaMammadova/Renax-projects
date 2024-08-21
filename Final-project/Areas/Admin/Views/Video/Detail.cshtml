@@ -1,0 +1,22 @@
+﻿@namespace Final_project.ViewModels.Videos
+
+@model VideoDetailVM
+
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <video src="~/assets/image/@Model.Video" playsinline="" autoplay="" loop="" style="width:200px; height:auto;" muted="">
+                    </video>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+</div>

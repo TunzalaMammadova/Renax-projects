@@ -1,0 +1,176 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Final_project</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Controllers\" />
+    <None Remove="Data\" />
+    <None Remove="Helpers\" />
+    <None Remove="Services\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Views\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="Areas\Admin\Views\Dashboard\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Header\" />
+    <None Remove="Views\Shared\Components\Footer\" />
+    <None Remove="Views\Home\" />
+    <None Remove="ViewModels\Settings\" />
+    <None Remove="Areas\Admin\Views\Setting\" />
+    <None Remove="Helpers\Extensions\" />
+    <None Remove="Areas\Admin\Views\Proccess\" />
+    <None Remove="ViewModels\Process\" />
+    <None Remove="ViewModels\VideoInfos\" />
+    <None Remove="Areas\Admin\Views\VideoInfo\" />
+    <None Remove="ViewModels\Brands\" />
+    <None Remove="Areas\Admin\Views\Brand\" />
+    <None Remove="Areas\Admin\Views\About\" />
+    <None Remove="ViewModels\Abouts\" />
+    <None Remove="ViewModels\Categories\" />
+    <None Remove="Areas\Admin\Views\Category\" />
+    <None Remove="Areas\Admin\Views\Car\" />
+    <None Remove="ViewModels\Cars\" />
+    <None Remove="ViewModels\Videos\" />
+    <None Remove="Areas\Admin\Views\Video\" />
+    <None Remove="Helpers\Request\" />
+    <None Remove="Views\About\" />
+    <None Remove="Views\Team\" />
+    <None Remove="Areas\Admin\Views\Transfer\" />
+    <None Remove="ViewModels\Transfers\" />
+    <None Remove="Views\Transfer\" />
+    <None Remove="Views\CarListing\" />
+    <None Remove="Views\Car\" />
+    <None Remove="Views\CarDetail\" />
+    <None Remove="ViewModels\Teams\" />
+    <None Remove="Areas\Admin\Views\Team\" />
+    <None Remove="ViewModels\RentalConditions\" />
+    <None Remove="Areas\Admin\Views\RentalCondition\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="Views\Account\" />
+    <None Remove="ViewModels\Accounts\" />
+    <None Remove="ViewModels\ServiceCondition\" />
+    <None Remove="Areas\Admin\Views\ServiceCondition\" />
+    <None Remove="ViewModels\ServiceDetails\" />
+    <None Remove="Areas\Admin\Views\ServiceDetail\" />
+    <None Remove="Helpers\Enum\" />
+    <None Remove="ViewModels\UserAdmin\" />
+    <None Remove="Areas\Admin\Views\User\" />
+    <None Remove="Views\ServiceDetail\" />
+    <None Remove="ViewModels\Complaints\" />
+    <None Remove="Areas\Admin\Views\ComplaintSuggest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Data\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\admin\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Areas\Admin\Views\Dashboard\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="wwwroot\admin\css\" />
+    <Folder Include="wwwroot\admin\fonts\" />
+    <Folder Include="wwwroot\admin\images\" />
+    <Folder Include="wwwroot\admin\scss\" />
+    <Folder Include="wwwroot\admin\js\" />
+    <Folder Include="wwwroot\admin\vendors\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Header\" />
+    <Folder Include="Views\Shared\Components\Footer\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="ViewModels\Settings\" />
+    <Folder Include="Areas\Admin\Views\Setting\" />
+    <Folder Include="Helpers\Extensions\" />
+    <Folder Include="Areas\Admin\Views\Proccess\" />
+    <Folder Include="ViewModels\Process\" />
+    <Folder Include="ViewModels\VideoInfos\" />
+    <Folder Include="Areas\Admin\Views\VideoInfo\" />
+    <Folder Include="ViewModels\Brands\" />
+    <Folder Include="Areas\Admin\Views\Brand\" />
+    <Folder Include="Areas\Admin\Views\About\" />
+    <Folder Include="ViewModels\Abouts\" />
+    <Folder Include="ViewModels\Categories\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\Car\" />
+    <Folder Include="ViewModels\Cars\" />
+    <Folder Include="ViewModels\Videos\" />
+    <Folder Include="Areas\Admin\Views\Video\" />
+    <Folder Include="Helpers\Request\" />
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Team\" />
+    <Folder Include="Areas\Admin\Views\Transfer\" />
+    <Folder Include="ViewModels\Transfers\" />
+    <Folder Include="Views\Transfer\" />
+    <Folder Include="Views\CarListing\" />
+    <Folder Include="Views\Car\" />
+    <Folder Include="Views\CarDetail\" />
+    <Folder Include="ViewModels\Teams\" />
+    <Folder Include="Areas\Admin\Views\Team\" />
+    <Folder Include="ViewModels\RentalConditions\" />
+    <Folder Include="Areas\Admin\Views\RentalCondition\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="ViewModels\Accounts\" />
+    <Folder Include="ViewModels\ServiceCondition\" />
+    <Folder Include="Areas\Admin\Views\ServiceCondition\" />
+    <Folder Include="ViewModels\ServiceDetails\" />
+    <Folder Include="Areas\Admin\Views\ServiceDetail\" />
+    <Folder Include="Helpers\Enum\" />
+    <Folder Include="ViewModels\UserAdmin\" />
+    <Folder Include="Areas\Admin\Views\User\" />
+    <Folder Include="wwwroot\templates\" />
+    <Folder Include="Views\ServiceDetail\" />
+    <Folder Include="wwwroot\icons\" />
+    <Folder Include="ViewModels\Complaints\" />
+    <Folder Include="Areas\Admin\Views\ComplaintSuggest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.32" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.32" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.32">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.32">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.32" />
+    <PackageReference Include="MailKit" Version="4.7.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\admin\" />
+    <Content Remove="wwwroot\admin\css\" />
+    <Content Remove="wwwroot\admin\fonts\" />
+    <Content Remove="wwwroot\admin\images\" />
+    <Content Remove="wwwroot\admin\scss\" />
+    <Content Remove="wwwroot\admin\js\" />
+    <Content Remove="wwwroot\admin\vendors\" />
+    <Content Remove="wwwroot\templates\" />
+    <Content Remove="wwwroot\icons\" />
+  </ItemGroup>
+</Project>

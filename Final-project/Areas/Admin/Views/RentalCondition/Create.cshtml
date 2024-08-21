@@ -1,0 +1,26 @@
+﻿@namespace Final_project.ViewModels.RentalConditions
+
+@model RentalConditionVM
+
+<div class="container mt-5">
+    <h3 class="text-center text-success">Create new Car</h3>
+    <form class="form-sample mt-3" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label>Car</label>
+            <select class="form-control" asp-for="CarId" asp-items="@ViewBag.Cars"></select>
+
+            <label>Title</label>
+            <input asp-for="Title" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Title"></span>
+
+            <label>Description</label>
+            <input asp-for="Description" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>
+

@@ -1,0 +1,57 @@
+﻿@namespace Final_project.ViewModels.Cars
+
+@model CarCreateVM
+
+<div class="container mt-5">
+    <h3 class="text-center text-success">Create new Car</h3>
+    <form class="form-sample mt-3" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label>Image</label>
+            <input asp-for="Image" class="form-control" />
+            <span class="text-danger" asp-validation-for="Image"></span>
+
+            <label>Category</label>
+            <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.Categories"></select>
+
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Name"></span>
+
+            <label>Description</label>
+            <input asp-for="Description" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+            <label>Price</label>
+            <input asp-for="Price" type="number" min="0" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Price"></span>
+
+            <label>Age</label>
+            <input asp-for="Age" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Age"></span>
+
+            <label>AirCondition</label>
+            <input asp-for="AirCondition" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="AirCondition"></span>
+
+            <label>Door</label>
+            <input asp-for="Door" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Door"></span>
+
+            <label>Passenger</label>
+            <input asp-for="Passenger" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Passenger"></span>
+
+            <label>Transmission</label>
+            <input asp-for="Transmission" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Transmission"></span>
+
+            <label>Luggage</label>
+            <input asp-for="Luggage" class="form-control" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Luggage"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>

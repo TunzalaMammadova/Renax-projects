@@ -1,0 +1,94 @@
+﻿@namespace Final_project.ViewModels.Cars
+
+@model CarEditVM
+
+
+@section js {
+    <script src="~/admin/js/caredit.js"></script>
+    <script src="https://kit.fontawesome.com/83dcd321a4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+}
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-success">
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Edit" method="post" class="" enctype="multipart/form-data">
+                <div class="form-group">
+
+                    <input autocomplete="off" asp-for="Name" type="text" maxlength="100" placeholder="Name" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Name"></span>
+
+                    <input autocomplete="off" asp-for="Description" type="text" placeholder="Description" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <input autocomplete="off" asp-for="Age" type="text" maxlength="100" placeholder="Age" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Age"></span>
+
+                    <input autocomplete="off" asp-for="AirCondition" type="text" maxlength="100" placeholder="AirCondition" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="AirCondition"></span>
+
+                    <input autocomplete="off" asp-for="Passenger" type="text" maxlength="100" placeholder="Passenger" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Passenger"></span>
+
+                    <input autocomplete="off" asp-for="Luggage" type="text" maxlength="100" placeholder="Luggage" class="form-control form-control-line" />
+                    <span class="text-danger" asp-validation-for="Luggage"></span>
+
+                    <input autocomplete="off" asp-for="Transmission" type="text" maxlength="100" placeholder="Transmission" class="form-control form-control-line" autocomplete="off"/>
+                    <span class="text-danger" asp-validation-for="Transmission"></span>
+
+                    <input autocomplete="off" asp-for="Door" type="text" maxlength="100" placeholder="Door" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Door"></span>
+
+                    <input autocomplete="off" asp-for="Price" type="text" maxlength="100" placeholder="Price" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Price"></span>
+
+                    <select class="form-control mt-3" asp-for="CategoryId" asp-items="@ViewBag.categories">
+                    </select>
+
+                    <label>Product Images</label>
+                    <div class="product-images">
+                        @foreach (var item in Model.ExistImages)
+                         {
+                            <div class="edit-image @(item.IsMain ? "main-image" : "")" data-id="@item.Id" data-car-id="@item.CarId">
+                                <img src="~/assets/image/@item.Image"/>
+                                <div class="product-action">
+                                    <ul>
+                                        <li>
+                                            <a href="" class="make-main">
+                                                <i class="fa-solid fa-car-side"></i>
+                                                <span class="tooltip-text">Make main image</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="remove-image">
+                                                <i class="fa-solid fa-trash text-danger"></i>
+                                                <span class="tooltip-text">Remove image</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                         }
+                        <div class="upload-container">
+                            <label class="upload-button">
+                                <input asp-for="NewImages">
+                            </label>
+                        </div>
+                        <span class="text-danger d-block" asp-validation-for="NewImages"></span>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+

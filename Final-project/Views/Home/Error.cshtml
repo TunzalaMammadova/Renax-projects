@@ -1,0 +1,36 @@
+﻿
+@section css {
+    <link rel="stylesheet" href="~/assets/css/error.css">
+}
+
+
+<title>Error</title>
+
+<header>
+    <section id="bckr-img" style="background-image: url('/assets/image/404.jpg');">
+        <div class="container">
+            <div class="col-12">
+                <div class="rent-area">
+                    <div class="rent">
+                        <p>404 Page</p>
+                        <h1>Page not found</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover"></div>
+    </section>
+</header>
+<main>
+    <section id="error">
+        <div class="container">
+            <div class="row not-found">
+                <div class="col-lg-6 col-md-12 text">
+                    <h1>404</h1>
+                    <h3>@ViewBag.ErrorMessage</h3>
+                    <p>The page you are looking for was moved, removed, renamed or never existed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

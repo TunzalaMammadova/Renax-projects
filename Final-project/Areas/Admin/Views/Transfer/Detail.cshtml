@@ -1,0 +1,27 @@
+﻿@namespace Final_project.ViewModels.Transfer
+
+@model TransferDetailVM
+
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="~/assets/image/@Model.Image" style="width:200px !important; height:200px !important" />
+                </td>
+                <td>@Model.Name</td>
+                <td>@Model.Description</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+</div>

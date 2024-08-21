@@ -1,0 +1,46 @@
+﻿@namespace Final_project.ViewModels.ServiceDetails
+
+@model ServiceDetailVM
+
+<div class="container mt-5">
+    <h3 class="text-center text-success">Create new Car</h3>
+    <form class="form-sample mt-3" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label>Service</label>
+            <select class="form-control" asp-for="ServiceId" asp-items="@ViewBag.services"></select>
+
+            <label>Description</label>
+            <input asp-for="Description" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+            <label>Options</label>
+            <input asp-for="Options" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="Options"></span>
+
+            <label>OptionDescription</label>
+            <input asp-for="OptionDescription" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="OptionDescription"></span>
+
+            <label>Booking</label>
+            <input asp-for="Booking" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="Booking"></span>
+
+            <label>BookingDescription</label>
+            <input asp-for="BookingDescription" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="BookingDescription"></span>
+
+            <label>Luggage</label>
+            <input asp-for="Luggage" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="Luggage"></span>
+
+            <label>LuggageDescription</label>
+            <input asp-for="LuggageDescription" class="form-control" autocomplete="off"/>
+            <span class="text-danger" asp-validation-for="LuggageDescription"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>
+

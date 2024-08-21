@@ -1,0 +1,53 @@
+﻿@namespace Final_project.ViewModels
+
+@model HomeVM
+
+
+
+@section css {
+    <link rel="stylesheet" href="~/assets/css/team.css">
+}
+<title>Team</title>
+
+<header>
+    <section id="bckr-img" style="background-image: url('assets/image/bentley.jpg');">
+        <div class="container">
+            <div class="col-12">
+                <div class="rent-area">
+                    <div class="rent">
+                        <p>SALES CONSULTANTS</p>
+                        <h1>Our Experts Team</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover"></div>
+    </section>
+</header>
+<main>
+    <section id="team-area">
+        <div class="container">
+            <div class="row">
+                <div class="our">
+                    <h1>Our Team</h1>
+                </div>
+                @foreach (var item in Model.Teams)
+                 {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                            <img src="~/assets/image/@item.Image" class="" alt="">
+                            <div class="bottom-fade"></div>
+                            <div class="  icon-bg">
+                                <div class="icon">.!</div>
+                            </div>
+                            <div class="title">
+                                <h4>@item.Name</h4>
+                                <h6>@item.Description</h6>
+                            </div>
+                        </div>
+                    </div>
+                 }
+            </div>
+        </div>
+    </section>
+</main>

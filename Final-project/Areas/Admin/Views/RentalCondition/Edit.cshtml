@@ -1,0 +1,30 @@
+﻿@namespace Final_project.ViewModels.RentalConditions
+
+@model RentalConditionEditVM
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-success">
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Edit" method="post" class="" enctype="multipart/form-data">
+                <div class="form-group">
+
+                    <input autocomplete="off" asp-for="Title" type="text" placeholder="Title" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Title"></span>
+
+                    <input autocomplete="off" asp-for="Description" type="text" placeholder="Description" class="form-control form-control-line" autocomplete="off" />
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <select class="form-control mt-3" asp-for="CarId" asp-items="@ViewBag.cars">
+                    </select>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+

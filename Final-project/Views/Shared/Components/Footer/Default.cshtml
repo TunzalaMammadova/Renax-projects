@@ -1,0 +1,98 @@
+﻿
+@namespace Final_project.ViewModels.HeaderVM
+
+@model FooterVM
+
+<footer>
+    <div class="container">
+        <div class="footer-up">
+            <div class="row">
+                    <div class="col-12 ">
+                        <div class="contact-area center">
+                            <div class="contact">
+                                <div class="call-us">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h6>CallUs</h6>
+                                        <p>@Model.Settings["Call us"]</p>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="message">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h6>Email</h6>
+                                        <p>@Model.Settings["Write to us"]</p>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="address">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h6>Address</h6>
+                                        <p>@Model.Settings["Address"]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="footer-down">
+            <div class="row">
+                <div class="col-5">
+                    <div class="renax">
+                        <div class="logo-footer">
+                            <a asp-controller="Home" asp-action="Index"><img src="~/assets/image/logo-light.png" alt=""></a>
+                        </div>
+                        <div class="logo-text">
+                            <p>Rent a car imperdiet sapien porttito the bibenum ellentesue.</p>
+                            <div class="social-icons">
+                                <ul>
+                                    <li><a href="https://api.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="quick-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a asp-controller="About" asp-action="Index">About</a></li>
+                            <li><a asp-controller="CarListing" asp-action="Index">Cars</a></li>
+                            <li><a asp-controller="Transfer" asp-action="Index">Service</a></li>
+                            <li><a asp-controller="Team" asp-action="Index">Team</a></li>
+                            <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="subscribe">
+                        <div class="sub-text">
+                            <h3>Subscribe</h3>
+                            <p>
+                                Want to be notified about our services. Just sign up and we'll send you a
+                                notification by email.
+                            </p>
+                        </div>
+                        <div class="sub-button">
+                            <form action="#">
+                                <input type="email" class="subscribe-input" placeholder="Email Address" autocomplete="off" required="">
+                                <button type="submit" class="subscriber"><i class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

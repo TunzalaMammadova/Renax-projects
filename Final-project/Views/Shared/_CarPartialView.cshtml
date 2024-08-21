@@ -1,0 +1,46 @@
+﻿@namespace Final_project.ViewModels
+
+@model HomeVM
+
+<div class="row">
+    @foreach (var item in Model.PaginateCar.Datas)
+     {
+        <div class="col-lg-6 col-md-12 mb-30">
+            <div class="car-item">
+                <div class="car-img">
+                    <img src="~/assets/image/@item.Image" class="" alt="">
+                </div>
+                <div class="car-detail">
+                    <div class="car-title">
+                        <h3>@item.Name</h3>
+                        <div class="item">
+                            <span><i class="fa-solid fa-whiskey-glass"></i>Door</span>
+                            <p>@item.Door</p>
+                        </div>
+                        <div class="item">
+                            <span><i class="fa-solid fa-user"></i>Passenger</span>
+                            <p>@item.Passenger</p>
+                        </div>
+                        <div class="item">
+                            <span><i class="fa-solid fa-gears"></i>Transmission</span>
+                            <p>@item.Transmission</p>
+                        </div>
+                        <div class="item">
+                            <span><i class="fa-solid fa-suitcase"></i>Luggage</span>
+                            <p>@item.Luggage</p>
+                        </div>
+                        <div class="price-area">
+                            <div>
+                                <div class="price">$@item.Price<span>/ day</span></div>
+                            </div>
+                            <a asp-controller="CarDetail" asp-action="Index" asp-route-id="@item.Id" class="button-det">Deatils</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     }
+
+</div>
+
+

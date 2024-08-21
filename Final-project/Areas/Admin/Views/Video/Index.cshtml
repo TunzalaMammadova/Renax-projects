@@ -1,0 +1,42 @@
+﻿@namespace Final_project.ViewModels.Videos
+
+@model List<VideoVM>
+
+<div class="container mt-5">
+    @if (User.IsInRole("SuperAdmin"))
+    {
+        <div class="create-adventage">
+            <a asp-area="Admin" asp-controller="Video" asp-action="Create" class="btn btn-success text-white" style="font-size:30px;width:100px;">+</a>
+        </div>
+    }
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Video</th>
+                <th scope="col">Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <video src="~/assets/image/@item.Video" playsinline="" autoplay="" loop="" style="width:200px; height:auto;" muted="">
+                        </video>
+                    </td>
+                    <td>
+                        <a class="btn btn-info text-white" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                        <a class="btn btn-warning text-white" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        @if (User.IsInRole("SuperAdmin"))
+                        {
+                            <form class="form-sample d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                <button type="submit" class="btn btn-danger text-white">Delete</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

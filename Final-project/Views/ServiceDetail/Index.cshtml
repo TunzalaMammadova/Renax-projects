@@ -1,0 +1,116 @@
+﻿@namespace Final_project.ViewModels
+
+@model HomeVM
+
+@section css {
+    <link rel="stylesheet" href="~/assets/css/service-detail.css">
+}
+<title>Service-detail</title>
+
+<header>
+    <section id="bckr-img" style="background-image: url('/assets/image/detail.jpg');">
+        <div class="container">
+            <div class="col-12">
+                <div class="rent-area">
+                    <div class="rent">
+                        <p>Services</p>
+                        <h1>@Model.Service.Name</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </div>
+    </section>
+</header>
+<main>
+    <section id="service-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="col-md-12">
+                        <div class="section-subtitle">Services</div>
+                        <div class="section-title">@Model.Service.Name</div>
+                        @foreach (var item in Model.Service.ServiceDetails)
+                        {
+                            <p>
+                                @item.Description
+                            </p>
+                            <h3>@item.Booking</h3>
+                            <p>
+                                @item.BookingDescription
+                            </p>
+                            <h3>@item.Luggage</h3>
+                            <p>
+                                @item.LuggageDescription
+                            </p>
+                            <h3>@item.Options</h3>
+                        }
+                        <ul class="list">
+                            <li>
+                                <div class="list-icon">
+                                    <p><i class="fa-solid fa-check"></i></p>
+                                </div>
+                                <div class="list-text">
+                                    <p>Security and Licensing</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon">
+                                    <p><i class="fa-solid fa-check"></i></p>
+                                </div>
+                                <div class="list-text">
+                                    <p>Private Car Services</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon">
+                                    <p><i class="fa-solid fa-check"></i></p>
+                                </div>
+                                <div class="list-text">
+                                    <p>Taxi or Rideshare Services</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="accordion-box">
+                            @foreach (var item in Model.Service.ServiceConditions)
+                             {
+                                <li class="item">
+                                    <div class="acc-btn">
+                                        <span>!. @item.Title</span><i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <div class="text">@item.Description</div>
+                                        </div>
+                                    </div>
+                                </li>
+                             }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="sidebar-page">
+                        <div class="title">
+                            <h4>All Services</h4>
+                        </div>
+                        <div class="item">
+                            @foreach (var item in Model.Services)
+                             {
+                                <div class="abouts">
+                                    <a asp-controller="ServiceDetail" asp-action="Index" asp-route-id="@item.Id"><span><i class="fa-solid fa-arrow-right"></i> @item.Name</span></a>
+                                </div>
+                             }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@section js {
+    <script src="~/assets/js/service-detail.js"></script>
+}

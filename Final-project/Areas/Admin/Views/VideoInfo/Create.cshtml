@@ -1,0 +1,24 @@
+﻿@namespace Final_project.ViewModels.VideoInfos
+
+@model VideoInfoCreateVM
+
+<div class="container mt-5">
+    <form class="form-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <input asp-for="Title" class="form-control" placeholder="Title" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Title"></span>
+
+            <input asp-for="SubTitle" class="form-control" placeholder="Subtitle" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="SubTitle"></span>
+
+            <input asp-for="Name" class="form-control" placeholder="Carname" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Name"></span>
+
+            <input asp-for="Price" class="form-control" placeholder="Price" autocomplete="off" />
+            <span class="text-danger" asp-validation-for="Price"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>

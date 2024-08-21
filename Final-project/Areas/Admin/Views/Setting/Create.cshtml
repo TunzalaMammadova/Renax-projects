@@ -1,0 +1,19 @@
+﻿@namespace Final_project.ViewModels.Settings
+
+@model SettingCreateVM
+
+<div class="container mt-5">
+    <form class="form-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <input asp-for="Key" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100">
+            <span class="text-danger" asp-validation-for="Key"></span>
+
+            <input asp-for="Value" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100">
+            <span class="text-danger" asp-validation-for="Value"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+﻿@namespace Final_project.ViewModels.ServiceCondition
+
+@model ServiceConditionDetailVM
+
+<div class="container mt-5">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="border-top-0">Service</th>
+                    <th class="border-top-0">Description</th>
+                    <th class="border-top-0">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="txt-oflo">
+                        <h6>@Model.Service</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Description</h6>
+                    </td>
+                    <td class="txt-oflo">
+                        <h6>@Model.Title</h6>
+                    </td>
+                </tr>
+            <tbody>
+        </table>
+    </div>
+    <div class="form-group mt-3">
+        <div class="col-sm-12">
+            <a asp-action="Index" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+
+</div>

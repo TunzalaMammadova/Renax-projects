@@ -1,0 +1,20 @@
+﻿
+@namespace Final_project.ViewModels.Settings
+
+@model SettingEditVM
+
+<div class="container mt-5">
+    <form class="form-sample" method="post" asp-action="Edit" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class=" form-control-label">Enter setting key</label>
+            <input asp-for="Key" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100">
+            <span class="text-danger" asp-validation-for="Key"></span>
+
+            <label class=" form-control-label">Enter setting key value</label>
+            <input asp-for="Value" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100">
+            <span class="text-danger" asp-validation-for="Value"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+    </form>
+</div>

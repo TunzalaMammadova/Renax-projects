@@ -1,0 +1,298 @@
+﻿@namespace Final_project.ViewModels
+
+@model HomeVM
+
+@section css {
+    <link rel="stylesheet" href="~/assets/css/car-details.css">
+}
+<title>Car-detail</title>
+
+
+<header>
+    <section id="bckr-img" style="background-image: url('/assets/image/@Model.Car.CarImages.FirstOrDefault(m=>m.IsMain).Image');">
+        <div class="container">
+            <div class="col-12">
+                <div class="rent-area">
+                    <div class="rent">
+                        <p>@Model.Car.Category.Name</p>
+                        <h1>@Model.Car.Name</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover"></div>
+    </section>
+</header>
+<main>
+    <section id="car-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="col-md-12">
+                        <h3>General Information</h3>
+                        <p>
+                            @Model.Car.Description
+                        </p>
+                        <ul class="list">
+                            <li>
+                                <div class="list-icon">
+                                    <p><i class="fa-solid fa-check"></i></p>
+                                </div>
+                                <div class="list-text">
+                                    <p>24/7 Roadside Assistance</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon">
+                                    <p><i class="fa-solid fa-check"></i></p>
+                                </div>
+                                <div class="list-text">
+                                    <p>Free Cancellation & Return</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon">
+                                    <p><i class="fa-solid fa-check"></i></p>
+                                </div>
+                                <div class="list-text">
+                                    <p>Rent Now Pay When You Arrive</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+
+                        <div class="image-area col-md-12">
+                            <h3>Image Gallery</h3>
+                            <div class="images">
+                                <div class="image">
+                                    @foreach (var item in Model.Car.CarImages)
+                                    {
+                                        <img src="~/assets/image/@item.Image" class="" alt="">
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <ul class="accordion-box">
+                            @foreach (var item in Model.Car.RentalConditions)
+                            {
+                                <li class="item">
+                                    <div class="acc-btn">
+                                        <span>!. @item.Title</span><i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <div class="text">@item.Description</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="sidebar-page">
+                        <div class="title">
+                            <h4>$600 / rent per day</h4>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <span><i class="fa-solid fa-whiskey-glass"></i>Doors</span>
+                                <p>4</p>
+                            </div>
+                            <div class="item">
+                                <span><i class="fa-solid fa-user"></i> Passengers</span>
+                                <p>5</p>
+                            </div>
+                            <div class="item">
+                                <span><i class="fa-solid fa-gears"></i>Transmission</span>
+                                <p>Auto</p>
+                            </div>
+                            <div class="item">
+                                <span><i class="fa-solid fa-suitcase"></i> Luggage</span>
+                                <p>2 Bags</p>
+                            </div>
+                            <div class="item">
+                                <span><i class="fa-solid fa-temperature-arrow-up"></i>Air Condition</span>
+                                <p>Yes</p>
+                            </div>
+                            <div class="item">
+                                <span><i class="fa-solid fa-person"></i> Age</span>
+                                <p>25</p>
+                            </div>
+                            <div class="btn-double mt-30" data-grouptype="&amp;">
+                                <a data-bs-toggle="modal"
+                                   data-bs-target="#exampleModal" href="#0">Rent Now</a> <a target="_blank">
+                                    <span class="fa-brands fa-whatsapp"></span> WhatsApp
+                                </a>
+                            </div>
+                            <div class="modal fade rentcar" id="exampleModal" tabindex="-1"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Booking Form</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="booking-form">
+                                                <div class="booking-inner">
+                                                    <form method="post" action="#0" class="form">
+                                                        <div class="booking-box">
+                                                            <form method="post" action="#0" class="form">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6 col-md-12">
+                                                                        <input name="phone" type="text"
+                                                                               placeholder="Phone *" required>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-12">
+                                                                        <div class="selects">
+                                                                            <div class="select-area">
+                                                                                <select class="select-box"
+                                                                                        style="width: 100%">
+                                                                                    <option value="0">
+                                                                                        Choose Car
+                                                                                    </option>
+                                                                                    <option value="1">
+                                                                                        Lamborghini
+                                                                                        Urus
+                                                                                    </option>
+                                                                                    <option value="2">
+                                                                                        Aston Martin
+                                                                                        DBX
+                                                                                    </option>
+                                                                                    <option value="3">
+                                                                                        Bentley
+                                                                                        Bentayga
+                                                                                    </option>
+                                                                                    <option value="4">
+                                                                                        Bugatti
+                                                                                        Mistral W16
+                                                                                    </option>
+                                                                                    <option value="5">
+                                                                                        Rolls Royce
+                                                                                        Cullinan
+                                                                                    </option>
+                                                                                    <option value="6">
+                                                                                        Bentley
+                                                                                        Continental
+                                                                                    </option>
+                                                                                    <option value="7">
+                                                                                        Audi RS7 Sport
+                                                                                        Carsback
+                                                                                    </option>
+                                                                                    <option value="8">
+                                                                                        AUDI Q8
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-12">
+                                                                        <div class="selects">
+                                                                            <div class="select-area">
+                                                                                <select class="select-box"
+                                                                                        style="width: 100%">
+                                                                                    <option value="0">
+                                                                                        Pick Up
+                                                                                        Location
+                                                                                    </option>
+                                                                                    <option value="1">Dubai</option>
+                                                                                    <option value="2">
+                                                                                        Abu Dhabi
+                                                                                    </option>
+                                                                                    <option value="3">
+                                                                                        Sharjah
+                                                                                    </option>
+                                                                                    <option value="4">Alain</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-12">
+                                                                        <div class="selects">
+                                                                            <div class="select-area">
+                                                                                <select class="select-box"
+                                                                                        style="width: 100%">
+                                                                                    <option value="0">
+                                                                                        Drop Off
+                                                                                        Location
+                                                                                    </option>
+                                                                                    <option value="1">Alain</option>
+                                                                                    <option value="2">
+                                                                                        Sharjah
+                                                                                    </option>
+                                                                                    <option value="3">
+                                                                                        Abu Dhabi
+                                                                                    </option>
+                                                                                    <option value="4">Dubai</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-12">
+                                                                        <div class="inputs">
+                                                                            <label>Pick Up Date</label>
+                                                                            <div class="inputs">
+                                                                                <input type="date"
+                                                                                       placeholder="Pick Up Date"
+                                                                                       required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-12">
+                                                                        <div class="inputs">
+                                                                            <label>Return Date</label>
+                                                                            <div class="inputs">
+                                                                                <input type="date"
+                                                                                       placeholder="Return Date">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12 form-group">
+                                                                        <textarea name="message" id="message"
+                                                                                  cols="30" rows="4"
+                                                                                  placeholder="Additional Note"></textarea>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12">
+                                                                        <button type="submit"
+                                                                                class="booking-button mt-15">
+                                                                            Rent
+                                                                            Now
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="alert alert-success contact__msg"
+                                                                     style="display: none" role="alert">
+                                                                    Your message
+                                                                    was
+                                                                    sent successfully.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@section js {
+    <script src="~/assets/js/car-detail.js"></script>
+}

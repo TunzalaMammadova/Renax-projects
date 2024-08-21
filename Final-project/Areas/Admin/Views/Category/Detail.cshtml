@@ -1,0 +1,32 @@
+﻿@namespace Final_project.ViewModels.Categories
+
+@model CategoryDetailVM
+
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">CarCount</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="~/assets/image/@Model.Image" style="width:200px !important; height:200px !important" />
+                </td>
+                <td>@Model.Name</td>
+                <td>
+                    @if (Model.CarCount != 0)
+                     {
+                        <h3>Car count : @Model.CarCount</h3>
+                     }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+   
+    <a asp-action="Index" class="btn btn-primary text-white">Back</a>
+</div>
