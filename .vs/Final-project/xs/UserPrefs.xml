@@ -1,23 +1,54 @@
 ﻿<Properties StartupConfiguration="{7D334C27-CD3F-46D8-AC4B-09D3DB2159A1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Final-project/Data/AppDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Final-project/Areas/Admin/Controllers/UserController.cs">
     <Files>
-      <File FileName="Final-project/Data/AppDbContext.cs" Line="15" Column="47" />
-      <File FileName="Final-project/Areas/Admin/Views/Car/Index.cshtml" Line="60" Column="17" />
-      <File FileName="Final-project/Areas/Admin/Views/Car/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Final-project/Areas/Admin/Views/Reservation/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Final-project/Areas/Admin/Controllers/UserController.cs" Line="73" Column="35" />
+      <File FileName="Final-project/Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="Final-project/Program.cs" Line="101" Column="1" />
+      <File FileName="Final-project/Services/ProccessService.cs" Line="14" Column="1" />
+      <File FileName="Final-project/Services/ReservationService.cs" Line="28" Column="10" />
+      <File FileName="Final-project/Controllers/CarDetailController.cs" Line="44" Column="293" />
+      <File FileName="Final-project/ViewModels/HomeVM.cs" Line="28" Column="43" />
+      <File FileName="Final-project/Views/CarDetail/Index.cshtml" Line="25" Column="10" />
+      <File FileName="Final-project/Areas/Admin/Views/User/Index.cshtml" Line="48" Column="26" />
+      <File FileName="Final-project/ViewModels/UserAdmin/UserVM.cs" Line="13" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Final-project" selected="True" />
+          <Node name="Final-project" expanded="True">
+            <Node name="Final-project">
+              <Node name="Areas" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="UserController.cs" selected="True" />
+                  </Node>
+                  <Node name="Views" expanded="True">
+                    <Node name="Reservation" expanded="True" />
+                    <Node name="User" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Cars" expanded="True" />
+                <Node name="UserAdmin" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="CarDetail" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Final-project PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

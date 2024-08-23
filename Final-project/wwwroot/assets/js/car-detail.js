@@ -86,4 +86,134 @@ $(function () {
             }
         });
     }
+
+
+    let startDate = null;
+    let endDate = null;
+
+    Date.prototype.addDays = function (days) {
+        var date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    };
+
+    function getDates(startDate, stopDate) {
+        var dateArray = [];
+        var currentDate = startDate;
+        while (currentDate <= stopDate) {
+            dateArray.push(moment(new Date(currentDate)).format('YYYY-MM-DD'));
+            currentDate = currentDate.addDays(1);
+        }
+        return dateArray;
+    }
+
+    let pickUpInput = $('input[name="pickUpDate"]');
+    pickUpInput.daterangepicker({
+        opens: 'left',
+        autoUpdateInput: false,
+        minDate: new Date(),
+        isInvalidDate: function (ele) {
+            var currDate = moment(ele._d).format('YYYY-MM-DD');
+            return reservations.reduce((prev, val) => [...prev, ...getDates(val.startDate, val.endDate)], []).indexOf(currDate) != -1;
+        }
+    });
+
+    let returnInput = $('input[name="returnDate"]');
+    returnInput.daterangepicker({
+        opens: 'left',
+        autoUpdateInput: false,
+        minDate: new Date(),
+        isInvalidDate: function (ele) {
+            var currDate = moment(ele._d).format('YYYY-MM-DD');
+            return reservations.reduce((prev, val) => [...prev, ...getDates(val.startDate, val.endDate)], []).indexOf(currDate) != -1;
+        }
+    });
+
+    pickUpInput.on('apply.daterangepicker', function (ev, picker) {
+        startDate = picker.startDate.format('YYYY-MM-DD');
+        $('input[name="pickUpDate"]').val(startDate);
+    });
+    returnInput.on('apply.daterangepicker', function (ev, picker) {
+        endDate = picker.endDate.format('YYYY-MM-DD');
+        $('input[name="returnDate"]').val(endDate);
+    });
+
+    $(document).on('click', '.booking-form .booking-box .booking-button', function (e) {
+        e.preventDefault();
+
+        let carId = parseInt($(this).attr("id"));
+        let serviceId = $(".select-box").val();
+        let enquiry = $(".message").val();
+        let userEmail = $(".email").val();
+
+        console.log("Form data:", carId, startDate, endDate, enquiry, serviceId);
+
+        if (userEmail.trim() === "" || startDate === null || endDate === null || enquiry.trim() === "") {
+            toastr["error"]("Please fill all inputs");
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+            return;
+        }
+
+        $.ajax({
+            url: `../AddReservation`,
+            data: { carId, startDate, endDate, serviceId },
+            type: 'POST',
+            success: function (response) {
+                toastr["success"]("Thanks for your reservation");
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+            },
+            error: function (response) {
+                toastr["error"]("sss");
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+            }
+        });
+    });
 })

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aKG7ozYZX8ED1z8AF25PH8cRhKKVNzqOGdp14cq/cRc=",
+  "Hash": "t/BHwpYer5Gq+ykE9/ZKzzOuyADzghg3vq5fuxMG0KU=",
   "Source": "Final-project",
   "BasePath": "_content/Final-project",
   "Mode": "Default",
@@ -16964,6 +16964,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/js/service.js"
+    },
+    {
+      "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/js/User.js",
+      "SourceId": "Final-project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/",
+      "BasePath": "_content/Final-project",
+      "RelativePath": "assets/js/User.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/js/User.js"
     },
     {
       "Identity": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/icons/icons.css",

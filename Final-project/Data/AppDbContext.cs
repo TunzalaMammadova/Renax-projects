@@ -24,6 +24,8 @@ namespace Final_project.Data
         public DbSet<ServiceDetail> ServiceDetails { get; set; }
         public DbSet<Subscriber> Subscribers { get; set; }
         public DbSet<ComplaintSuggest> ComplaintSuggests { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+
 
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

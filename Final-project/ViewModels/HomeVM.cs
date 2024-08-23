@@ -25,6 +25,7 @@ namespace Final_project.ViewModels
         public List<CarVM> CarVM { get; set; }
         public string UserFullName { get; set; }
         public string UserEmail { get; set; }
+        public List<ReservDatesVM> ReservDates { get; set; }
     }
 }
 

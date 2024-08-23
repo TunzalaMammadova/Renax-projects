@@ -15,6 +15,8 @@
         public int CategoryId { get; set; }
         public ICollection<CarImage> CarImages { get; set; }
 		public ICollection <RentalCondition> RentalConditions{ get; set; }
-	}
+        public ICollection<Reservation> Reservations { get; set; }
+
+    }
 }
 

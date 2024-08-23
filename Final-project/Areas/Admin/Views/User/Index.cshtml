@@ -2,7 +2,7 @@
 
 @model List<UserVM>
 
-<div class="container">
+<div class="container mt-5">
     @if (User.Identity.IsAuthenticated)
     {
         if (User.IsInRole("SuperAdmin"))
@@ -20,6 +20,7 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>Roles</th>
+                    <th>Operations</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +30,21 @@
                         <td>@item.FullName</td>
                         <td>@item.UserName</td>
                         <td>@item.Email</td>
-                        <td>@item.Roles</td>
+                        <td>
+                            <form asp-action="RemoveRole" method="post" class="form-inline">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="UserId" value="@item.UserId" />
+                                <select name="RoleName" class="form-control select-smaller">
+                                    @foreach (var role in item.Roles)
+                                    {
+                                        <option value="@role">@role</option>
+                                    }
+                                </select>
+                        <td>
+                            <button type="submit" class="btn btn-danger text-white remove-role-btn">Delete Role</button>
+                        </td>
+                        </form>
+                        </td>
                     </tr>
                 }
             </tbody>

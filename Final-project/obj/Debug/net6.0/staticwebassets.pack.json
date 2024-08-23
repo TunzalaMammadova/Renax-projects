@@ -3949,6 +3949,10 @@
       "PackagePath": "staticwebassets/assets/image/yellow.jpg"
     },
     {
+      "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/js/User.js",
+      "PackagePath": "staticwebassets/assets/js/User.js"
+    },
+    {
       "Id": "/Users/tunzale/Desktop/Renax/Final-project/wwwroot/assets/js/about.js",
       "PackagePath": "staticwebassets/assets/js/about.js"
     },

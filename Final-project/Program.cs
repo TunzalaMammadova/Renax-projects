@@ -39,6 +39,8 @@ builder.Services.AddScoped<IServiceDetailService, ServiceDetailService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ISubscriberService, SubscriberService>();
 builder.Services.AddScoped<IComplaintService, ComplaintService>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
+
 
 
 

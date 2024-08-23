@@ -27,7 +27,7 @@ $(function () {
     updateProgress();
     $(window).scroll(updateProgress);
     var offset = 150;
-    var duration = 550;
+    var duration = 100;
     jQuery(window).on('scroll', function () {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.progress-wrap').addClass('active-progress');
@@ -77,11 +77,6 @@ $(function () {
         }
     });
     
-    $(".datepicker").datepicker({
-        orientation: "top"
-        
-    });
-
 
     $(".cars1-carousel").owlCarousel({
         loop: true,
