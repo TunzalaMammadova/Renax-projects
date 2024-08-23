@@ -40,7 +40,8 @@ namespace Final_project.Areas.Admin.Controllers
                     Email = user.Email,
                     FullName = user.FullName,
                     UserName = user.UserName,
-                    Roles = roles
+                    Roles = roles.ToList(),
+                    UserId = user.Id
                 }) ;
             }
 
